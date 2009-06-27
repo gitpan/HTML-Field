@@ -1,0 +1,39 @@
+HTML-Field version 0.01
+=======================
+
+The HTML::Field set of modules creates objects that represent HTML form fields
+which try to make it easier to interact with CGI objects, databases, and 
+HTML::Template objects. 
+
+The objective of an HTML::Field object is to know how to write its own HTML, 
+how to get its value out of a CGI object or from a hash,
+how to add their value to a hash suitable for passing into a HTML::Template
+or into a SQL::Abstract object, for example, and thus re-use some of the code
+which is typically repeated several times in a CGI script.
+
+This bundle includes also HTML::FieldForm, which is a very simple module to 
+manage sets of HTML::Field objects.
+
+INSTALLATION
+
+To install these modules type the following:
+
+   perl Makefile.PL
+   make
+   make test
+   make install
+
+DEPENDENCIES
+
+This set of modules depends only on standard modules 
+distributed with Perl.
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2006 by Julio Fraire, julio.fraire@gmail.com
+
+This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.3 or,
+at your option, any later version of Perl 5 you may have available.
+
+

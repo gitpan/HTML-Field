@@ -1,0 +1,17 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/Form.t
+t/Radio.t
+t/xhtml.t
+t/Checkbox.t
+t/Select.t
+t/Textfield.t
+t/Textarea.t
+t/Hidden.t
+t/Password.t
+lib/HTML/Field.pm
+lib/HTML/FieldForm.pm
+
+META.yml                                 Module meta-data (added by MakeMaker)

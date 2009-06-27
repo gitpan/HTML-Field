@@ -1,0 +1,72 @@
+Revision history for Perl extension HTML::Field.
+
+# $Id: Field.pm,v 1.16 2009/05/27 22:51:10 julio Exp $
+# $Log: Field.pm,v $
+# Revision 1.18  2009/06/27 22:46:03  julio
+# Removed attribute 'wrap' from Textarea
+#
+# Revision 1.17  2009/05/27 23:21:45  julio
+# Updated $VERSION
+#
+# Revision 1.16  2009/05/27 22:51:10  julio
+# If an object other than CGI is given to the value method, it is
+# assumed to work as a hash reference. This includes hash references.
+# This is to work with DBIx::DataModel based classes.
+# Miscellaneous changes to the documentation.
+#
+# Revision 1.15  2009/05/01 22:05:31  julio
+# Fixed problem with hidden fields' readonly_html.
+#
+# Revision 1.14  2009/05/01 21:50:23  julio
+# Fixed bug in checkbox. It was not returning the html field correctly
+# when the field was valued.
+#
+# Revision 1.13  2009/05/01 05:13:29  julio
+# Completed documentation on each subclass and fixed Hidden, Textfield
+# and Checkbox to conform to the new docs.
+#
+# Revision 1.12  2009/04/28 20:18:45  julio
+# Removed Radiobutton.
+#
+# Revision 1.11  2009/04/28 20:15:54  julio
+# Added HTML::Field::Radio
+#
+# Revision 1.10  2009/04/27 04:13:31  julio
+# After a looong time!
+#
+# Revision 1.9  2007/10/13 03:51:30  julio
+# HTML::Field::Hidden no longer needs to know its value at creation time.
+#
+# Revision 1.8  2007/09/27 05:59:42  julio
+# Added documentation regarding 'default' for HTML::Field::Checkbox.
+# Fixed redundant condition in _editable_html.
+#
+# Revision 1.7  2007/09/26 04:41:22  julio
+# Added xhtml switch! I still need to do tests
+# and documentation; the current tests passed OK.
+#
+# Revision 1.6  2007/08/12 02:24:58  julio
+# Added method creation_html, docs and tests
+#
+# Revision 1.5  2007/08/10 02:57:17  julio
+# Integrated POD into this file
+#
+# Revision 1.4  2007/08/10 01:49:45  julio
+# Only ran perltidy on this file
+#
+# Revision 1.3  2007/08/10 01:26:32  julio
+# Added logic to implement primary_key and auto into text fields
+#
+# Revision 1.2  2006/12/10 01:33:11  julio
+# Improved test coverage for parent class
+#
+# Revision 1.1  2006/12/10 00:34:52  julio
+# Initial revision
+#
+# Revision 0.0  2006/12/01 03:26:05  julio
+# Initial revision
+
+0.01  Tue Mar 21 23:09:02 2006
+	- original version; created by h2xs 1.23 with options
+		-XA -n HTML::Field
+
