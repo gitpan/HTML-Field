@@ -1,15 +1,19 @@
 #! /usr/bin/perl
 
-use Test::More tests => 15;
+use Test::More;
 
 BEGIN {
-    use_ok('HTML::Field');
-    use_ok('HTML::FieldForm');
+    eval "use HTML::TokeParser";
+    plan skip_all => 'HTML::TokeParser needed for these tests' if $@;
 }
 
-use HTML::TokeParser;
 use CGI;
 use strict;
+
+plan tests => 15;
+
+use_ok('HTML::Field');
+use_ok('HTML::FieldForm');
 
 my $form = HTML::FieldForm->new(
         'field_name1' => [ 'Textfield', {
@@ -102,8 +106,14 @@ unlike($html{field_name3}, qr{id="field_name3"},
 like($html{field_name3}, qr{id="field_name3"}, 
     'id is included with add_id');
 
-#$Id: Form.t,v 0.3 2009/06/05 00:35:09 julio Exp julio $
+#$Id: Form.t,v 0.5 2009/11/22 05:20:44 julio Exp $
 #$Log: Form.t,v $
+#Revision 0.5  2009/11/22 05:20:44  julio
+#If HTML::TokeParser is not present, now all tests are skipped.
+#
+#Revision 0.4  2009/06/05 05:27:30  julio
+#Added tests for set_xhtml and add_id
+#
 #Revision 0.3  2009/06/05 00:35:09  julio
 #Changed tests to reflect new hash representation of HTML::FieldForm object
 #

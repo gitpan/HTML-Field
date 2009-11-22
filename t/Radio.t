@@ -1,10 +1,18 @@
 #!/usr/bin/perl -w
 
-use Test::More tests => 17;
-use Test::Exception;
+use Test::More;
 use HTML::Field;
-use HTML::TokeParser;
 use strict;
+
+BEGIN {
+    eval 'use Test::Exception; use HTML::TokeParser;';
+    plan skip_all => 
+        'Test::Exception and HTML::TokeParser needed for testing' 
+        if $@
+        ; 
+}
+
+plan tests => 17;
 
 # Test object creation
 my $field;

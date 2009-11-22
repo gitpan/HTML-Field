@@ -1,9 +1,15 @@
 # Test suite for HTML::Field::Checkbox Class
 
-use Test::More tests => 31;
-use Test::Exception;
+use Test::More;
 use HTML::Field;
 use strict;
+
+BEGIN {
+    eval 'use Test::Exception';
+    plan skip_all => 'Test::Exception needed for testing' if $@;
+}
+
+plan tests => 31;
 
 my $checkbox = HTML::Field->new(
     'Checkbox',

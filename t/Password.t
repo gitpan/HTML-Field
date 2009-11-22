@@ -1,3 +1,5 @@
+#!/usr/bin/perl -w
+
 use Test::More tests => 13;
 use HTML::Field;
 use strict;

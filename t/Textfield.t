@@ -6,13 +6,20 @@
 # override, like editable_html, value, and readonly_html.                 #
 ###########################################################################
 
-use Test::More tests => 47;
-
-BEGIN { use_ok('HTML::Field'); }
+use Test::More;
 
 use CGI;
 use HTML::TokeParser;
 use strict;
+
+BEGIN {
+    eval "use HTML::TokeParser";
+    plan skip_all => "HTML::TokeParser needed to complete tests" if $@;
+}
+
+plan tests => 47;
+
+use_ok('HTML::Field');
 
 my $field;
 
@@ -249,8 +256,11 @@ isnt( $tag, ( $field->creation_html )[1],
 
 # print "*********\n", join ' -- ', $field->editable_html, "\n*********\n";
 
-#$Id: Textfield.t,v 0.4 2009/04/28 04:39:42 julio Exp $
+#$Id: Textfield.t,v 0.5 2009/11/22 05:30:23 julio Exp $
 #$Log: Textfield.t,v $
+#Revision 0.5  2009/11/22 05:30:23  julio
+#Skips all if HTML::TokeParser is missing
+#
 #Revision 0.4  2009/04/28 04:39:42  julio
 #Fixed typo in HTML::Field and an inconsistency introduced in HTML::Field
 #regarding creation html.

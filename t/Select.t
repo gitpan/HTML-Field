@@ -1,9 +1,15 @@
 #!/usr/bin/perl -w
 
-use Test::More tests => 31;
-use HTML::TokeParser;
+use Test::More;
 use HTML::Field;
 use strict;
+
+BEGIN {
+    eval "use HTML::TokeParser";
+    plan skip_all => "HTML::TokeParser needed to complete tests" if $@;
+}
+
+plan tests => 31;
 
 my $field = HTML::Field->new(
     'Select',
