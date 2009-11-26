@@ -1,4 +1,4 @@
-HTML-Field version 0.01
+HTML-Field version 1.19
 =======================
 
 The HTML::Field set of modules creates objects that represent HTML form fields
@@ -26,11 +26,13 @@ To install these modules type the following:
 DEPENDENCIES
 
 This set of modules depends only on standard modules 
-distributed with Perl.
+distributed with Perl. However, to run the complete test suite you need
+to have HTML::TokeParser and Test::Exception. Most test files are skipped
+unless one or both modules are installed.
 
 COPYRIGHT AND LICENCE
 
-Copyright (C) 2006 by Julio Fraire, julio.fraire@gmail.com
+Copyright (C) 2009 by Julio Fraire, julio.fraire@gmail.com
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.3 or,

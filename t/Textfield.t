@@ -9,7 +9,6 @@
 use Test::More;
 
 use CGI;
-use HTML::TokeParser;
 use strict;
 
 BEGIN {
@@ -256,8 +255,11 @@ isnt( $tag, ( $field->creation_html )[1],
 
 # print "*********\n", join ' -- ', $field->editable_html, "\n*********\n";
 
-#$Id: Textfield.t,v 0.5 2009/11/22 05:30:23 julio Exp $
+#$Id: Textfield.t,v 0.6 2009/11/26 00:38:51 julio Exp $
 #$Log: Textfield.t,v $
+#Revision 0.6  2009/11/26 00:38:51  julio
+#Corrected removal of HTML::TokeParser from required modules
+#
 #Revision 0.5  2009/11/22 05:30:23  julio
 #Skips all if HTML::TokeParser is missing
 #

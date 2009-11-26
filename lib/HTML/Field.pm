@@ -4,7 +4,7 @@ use Carp;
 use strict;
 
 our $AUTOLOAD;
-our $VERSION = '1.18';
+our $VERSION = '1.19';
 our $XHTML   = 0;
 
 # The following hash contains HTML attributes common to all form elements.
@@ -91,7 +91,7 @@ sub new {
       unless defined $self->name;    # Name is a mandatory argument
 
     $self->reset_value
-      unless defined $self->value;   # Enforce default, if given
+      unless defined $self->value;   # Enforce default
 
     # Now perform any subclass-specific initialization
     $self->initialize;
@@ -1038,8 +1038,11 @@ This library is free software; you can redistribute it and/or modify it under th
 
 =cut
 
-# $Id: Field.pm,v 1.18 2009/06/27 22:46:03 julio Exp $
+# $Id: Field.pm,v 1.19 2009/11/26 00:37:41 julio Exp $
 # $Log: Field.pm,v $
+# Revision 1.19  2009/11/26 00:37:41  julio
+# Corrected test requirement in Textfield.t
+#
 # Revision 1.18  2009/06/27 22:46:03  julio
 # Removed attribute 'wrap' from Textarea
 #
